@@ -10,6 +10,8 @@ const ProductDetail = lazy(() => import("./components/ProductDetail.jsx"));
 const ProductList = lazy(() => import("./components/ProductList.jsx"));
 const ProductItem = lazy(() => import("./components/ProductItem.jsx"));
 const Cart = lazy(() => import("./components/Cart.jsx"));
+const SignIn = lazy(() => import("./components/SignIn.jsx"));
+const Fetchitems = lazy(() => import("./components/FetchItems.jsx"));
 
 const appRoute = createBrowserRouter([
   {
@@ -49,6 +51,22 @@ const appRoute = createBrowserRouter([
         element: (
           <Suspense fallback={<h1>loading...</h1>}>
             <ProductDetail />,
+          </Suspense>
+        ),
+      },
+      {
+        path: "/signIn",
+        element: (
+          <Suspense fallback={<h1>loading...</h1>}>
+            <SignIn />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/fetchItems",
+        element: (
+          <Suspense fallback={<h1>loading...</h1>}>
+            <Fetchitems />
           </Suspense>
         ),
       },

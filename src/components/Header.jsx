@@ -57,6 +57,12 @@ function Header() {
               Product List
             </Link>
           </li>
+          <li>
+            <Link to={"/signIn"}>Sign In</Link>
+          </li>
+          <li>
+            <Link to={"/fetchItems"}>Fetched items</Link>
+          </li>
           <li className="relative">
             <Link
               to={"/cart"}
